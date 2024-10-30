@@ -1,4 +1,5 @@
 "use server";
+
 import { lucia } from "@/auth";
 import prisma from "@/lib/prisma";
 import { signUpSchema, SignUpValues } from "@/lib/validation";
