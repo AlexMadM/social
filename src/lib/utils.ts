@@ -14,7 +14,7 @@ export function formatRelativeDate(from: Date) {
     if (currentDate.getFullYear() === from.getFullYear()) {
       return formatDate(from, "MMM d");
     } else {
-      return formatDate(from, "MMM d, yyy");
+      return formatDate(from, "MMM d, yyyy");
     }
   }
 }
@@ -24,4 +24,11 @@ export function formatNumber(n: number): string {
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(n);
+}
+
+export function slugify(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^a-z0-9-]/g, "");
 }
